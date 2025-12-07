@@ -43,7 +43,7 @@ st.sidebar.markdown("---")
 with st.form("user_input_form"):
 
     st.subheader("🧍 Customer Profile")
-    age = st.number_input("Age", min_value=0, value=20, max_value=100)
+    age = st.number_input("Age", min_value=0, value=25, max_value=100)
     family_size = st.number_input("Family Size", min_value=1)
     marital = st.number_input("Marital Status (Married/Together = 1, else 0)", min_value=0, max_value=1)
 
@@ -124,6 +124,7 @@ if submitted:
         st.success("💡 Customer is likely to respond to the campaign!")
     else:
         st.warning("⚠ Customer is unlikely to respond.")
+
 
 
 
