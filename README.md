@@ -28,3 +28,11 @@ The goal of this project is to accurately predict who will participate in the ne
     - Save model
     - Load model
     - Test with user's data
+
+# Refrences
+https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5
+https://towardsdatascience.com/top-10-model-evaluation-metrics-for-classification-ml-models-a0a0f1d51b9
+
+Contributions are welcome here! ✨💪
+
+
