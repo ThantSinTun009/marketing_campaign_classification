@@ -70,11 +70,11 @@ with st.form("user_input_form"):
     st.subheader("🛒 Purchase & Spending History")
     total_mnt = st.slider("Total Amount Spent", min_value=0,max_value=3000,value=500)
     recency = st.slider("Recency (Days since last purchase)", min_value=0, value=5, max_value=100)
-    numdp = st.slider("NumDealsPurchases", min_value=0, max_value=30)
-    numwebp = st.slider("NumWebPurchases", min_value=0, max_value=30)
-    numcatp = st.slider("NumCatalogPurchases", min_value=0, max_value=30)
-    numsp = st.slider("NumStorePurchases", min_value=0, max_value=30)
-    numwebvm = st.slider("NumWebVisitsMonth", min_value=0, max_value=30)
+    numdp = st.slider("Number of purchases made with discount", min_value=0, max_value=30)
+    numwebp = st.slider("Number of purchases made using catalogue", min_value=0, max_value=30)
+    numcatp = st.slider("Number of purchases made directly in stores", min_value=0, max_value=30)
+    numsp = st.slider("Number of purchases made through company’s web site", min_value=0, max_value=30)
+    numwebvm = st.slider("Number of visits to company’s web site in the last month", min_value=0, max_value=30)
 
     st.subheader("📢 Previous Campaign Response")
     acmp1 = st.radio("Respond to Campaign 1 ?", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No")
@@ -124,6 +124,7 @@ if submitted:
         st.success("💡 Customer is likely to respond to the campaign!")
     else:
         st.warning("⚠ Customer is unlikely to respond.")
+
 
 
 
