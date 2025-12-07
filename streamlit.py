@@ -62,7 +62,7 @@ with st.form("user_input_form"):
 
 
     st.subheader("📅 Enrollment Date")
-    st.write("Please provide the member's enrollment year and month. "
+    st.write("Please provide the member's enrollment year and month. ")
     year = st.number_input("Enrollment Year (YYYY)", min_value=2012, max_value=2014)
     month = st.number_input("Enrollment Month (1-12)", min_value=1, max_value=12)
     
@@ -124,5 +124,6 @@ if submitted:
         st.success("💡 Customer is likely to respond to the campaign!")
     else:
         st.warning("⚠ Customer is unlikely to respond.")
+
 
 
