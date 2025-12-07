@@ -48,7 +48,7 @@ with st.form("user_input_form"):
     marital = st.number_input("Marital Status (Married/Together = 1, else 0)", min_value=0, max_value=1)
 
     st.subheader("💰 Income Information")
-    income = st.slider("Enter Customer's Income",min_value=0,max_value=120000,value=50000, step=1000)
+    income = st.slider("Enter Customer's Income $",min_value=0,max_value=120000,value=50000, step=1000)
     
     st.subheader("🎓 Education Level")
     education = st.radio(
@@ -124,6 +124,7 @@ if submitted:
         st.success("💡 Customer is likely to respond to the campaign!")
     else:
         st.warning("⚠ Customer is unlikely to respond.")
+
 
 
 
