@@ -36,6 +36,8 @@ https://towardsdatascience.com/top-10-model-evaluation-metrics-for-classificatio
 
 https://www.kaggle.com/code/mustafagerme/modeling-car-insurance-claim-outcomes/notebook
 
+https://www.academia.edu/43840124/Hands_On_Machine_Learning_with_Scikit_Learn_Keras_and_TensorFlow_SECOND_EDITION_Concepts_Tools_and_Techniques_to_Build_Intelligent_Systems 
+
 Contributions are welcome here! ✨💪
 
 
