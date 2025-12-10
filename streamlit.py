@@ -15,12 +15,12 @@ model = load_model()
 # -------------------------
 # UI Layout
 # -------------------------
-st.title("📊 Customer Campaign Response Prediction App")
+st.title("Customer Campaign Response Prediction App")
 st.write("Fill in customer details below and click **Predict** to see the result.")
 
 logo_path = "images/parami.jpg"
 
-st.sidebar.markdown("👩‍🎓 Student Info")
+st.sidebar.markdown("Student Info")
 
 st.sidebar.markdown("---")  
 
@@ -42,15 +42,15 @@ st.sidebar.markdown("---")
 # -------------------------
 with st.form("user_input_form"):
 
-    st.subheader("🧍 Customer Profile")
+    st.subheader("Customer Profile")
     age = st.number_input("Age", min_value=0, value=25, max_value=100)
     family_size = st.number_input("Family Size", min_value=1)
     marital = st.number_input("Marital Status (Married/Together = 1, else 0)", min_value=0, max_value=1)
 
-    st.subheader("💰 Income Information")
+    st.subheader("Income Information")
     income = st.slider("Enter Customer's Income $",min_value=0,max_value=120000,value=50000, step=1000)
     
-    st.subheader("🎓 Education Level")
+    st.subheader("Education Level")
     education = st.radio(
     "Select the customer's highest education level:",
     ["Undergraduate", "Graduate", "Postgraduate"],
@@ -61,13 +61,13 @@ with st.form("user_input_form"):
     edu_postgrad = 1 if education == "Postgraduate" else 0
 
 
-    st.subheader("📅 Member Enrollment Date")
+    st.subheader("Member Enrollment Date")
     st.write("Please provide the member's enrollment year and month to the company. ")
     year = st.number_input("Enrollment Year (YYYY)", min_value=2012, max_value=2014)
     month = st.number_input("Enrollment Month (1-12)", min_value=1, max_value=12)
     
 
-    st.subheader("🛒 Purchase & Spending History")
+    st.subheader("Purchase & Spending History")
     total_mnt = st.slider("Total Amount Spent", min_value=0,max_value=3000,value=500)
     recency = st.slider("Recency (Days since last purchase)", min_value=0, value=5, max_value=100)
     numdp = st.slider("NumDealsPurchases - number of purchases made with discount", min_value=0, max_value=30)
@@ -76,7 +76,7 @@ with st.form("user_input_form"):
     numsp = st.slider("NumWebPurchases - number of purchases made through company’s web site", min_value=0, max_value=30)
     numwebvm = st.slider("NumWebVisitsMonth - number of visits to company’s web site in the last month", min_value=0, max_value=30)
 
-    st.subheader("📢 Previous Campaign Response")
+    st.subheader("Previous Campaign Response")
     acmp1 = st.radio("Respond to Campaign 1 ?", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No")
     acmp2 = st.radio("Respond to Campaign 2 ?", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No")
     acmp3 = st.radio("Respond to Campaign 3 ?", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No")
@@ -124,6 +124,7 @@ if submitted:
         st.success("💡 Customer is likely to respond to the campaign!")
     else:
         st.warning("⚠ Customer is unlikely to respond.")
+
 
 
 
